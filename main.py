@@ -1,17 +1,14 @@
 import quandl as q
 import yahooFinanceScraper as yh
-import pandas as pd
 import realTimeData as rtd
+from forecasting import auto_regulation
 
 
-q.ApiConfig.api_key = 'uRicrbBWVB_gVXxbS72V'
-mydata = q.get_table('SHARADAR/SEP')
 #QC terms
+#yhat WORKS!!! FUCK YEAH MACHINE FUCKING LEARNING
+#print(type(rtd.pullLiveData()))
 
-
-#rtd.pullLiveVisual()
-print(yh.getHeaderData())
-
+print(rtd.get_ticker_data_quandl('XOM'))
 
 
 
