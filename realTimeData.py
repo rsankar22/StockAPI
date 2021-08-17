@@ -17,7 +17,8 @@ def pullLiveVisual():
         qf = cf.QuantFig(df)
         qf.add_bollinger_bands()
         qf.add_macd()
-        qf.iplot(kind = 'ohlc', asPlot=True)
+        file_to_save = user_pull + str(curr_date)
+        qf.iplot(kind = 'ohlc', asPlot=True, filename = file_to_save, title = user_pull, yTitle = '$(USD)', xTitle = 'Date')
 
         check = input('Continue? [Y/N]: ')
 
@@ -32,6 +33,7 @@ def pullLiveData():
         qf = cf.QuantFig(df)
         qf.add_bollinger_bands()
         qf.add_macd()
-        qf.iplot(kind='ohlc', asFrame=True)
+        file_to_save = user_pull + str(curr_date)
+        qf.iplot(kind='ohlc', asFrame=True, filename = file_to_save,title = user_pull, yTitle = '$(USD)', xTitle = 'Date')
 
         check = input('Continue? [Y/N]: ')
